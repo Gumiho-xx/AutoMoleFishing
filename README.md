@@ -101,6 +101,8 @@ Next
 3. 到雪山，图片里的位置，这个位置会卡住，然后就可以运行了
 4. 模拟器开全屏(完全全屏不是窗口全屏)，分辨率1920x1080
 ![Image text](https://github.com/Gumiho-xx/AutoMoleFishing/blob/main/weizhi.jpg)
+
+
 ```
 For 100
 Delay 1500
