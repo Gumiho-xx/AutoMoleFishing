@@ -86,3 +86,66 @@ Else //开始拉钩1秒后感叹号就没了表示钓到了骨头，直接点一
 End If
 Next
 ```
+
+
+## 全世界最无脑的钓鱼脚本：
++ 不用调参
++ 全自动循环
++ 智能处理骨头、MISS、超时
++ 成功率99%
++ 失败不影响下一轮钓鱼
+## 目前只更新雪山渔场，如果你能看懂上面的，把下面的改改就行了就变成别的地方的脚本了。跟第二部分的差不多
+1. 设置，同屏只显示你自己
+2. 设置，强制晴朗白天
+3. 到雪山，图片里的位置，这个位置会卡住，然后就可以运行了
+4. 模拟器开全屏(完全全屏不是窗口全屏)，分辨率1920x1080
+
+
+
+
+```
+For 100
+Delay 1500
+MoveTo 1650,735 // 这是右边那个钓鱼按钮坐标，有可能要改
+Delay 50
+LeftClick 1
+a = 0
+c = 0
+While a = 0
+	Delay 100
+	IfColor 1113, 267, "82F3FF", 2 Then
+		a = 1
+		MoveTo 1650,735
+		Delay 10
+		LeftClick 1
+	End If
+	Wend
+Delay 1000
+IfColor 1113, 267, "82F3FF", 2 Then
+	While c < 50
+		Delay 100
+		c = c+1
+		FindColorEx 880, 626, 977, 688, "AE7131", 1, 0.88, x, y
+		If x>50 and y>50 Then
+			MoveTo 1650,735
+			Delay 10
+			LeftClick 1
+			c = 100 
+		End If
+	Wend
+	Delay 5000
+		IfColor 937, 240, "8CF0F8", 0 Then
+			MoveTo 1650,735
+			Delay 10
+			LeftClick 1
+		Else
+		End If
+Else
+	Delay 5000
+	MoveTo 1650,735
+	Delay 10
+	LeftClick 1 
+End If
+Next
+```
+
